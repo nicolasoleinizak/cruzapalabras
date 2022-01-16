@@ -7,6 +7,7 @@ export class MatrixSchema{
     this.height = this.width
     this.matrix = this.initializeMatrix(this.width, this.height, "")
     this.words = this.sortWords(words).map( word => {return word.toUpperCase()}).filter(word => { return word !== ""})
+    this.words_left = []
     this.glossary = {
       horizontal: [],
       vertical: []
@@ -150,9 +151,8 @@ export class MatrixSchema{
           ready = true
         }
       }
-      //console.log("word_list_loop: "+words_list_loop)
+      this.words_left = words
     }
-    //console.log("tries: "+tries)
   }
 
   wordFits(word, letter_position, cell){
@@ -358,7 +358,7 @@ export class MatrixSchema{
       matrix: this.matrix,
       horizontal: this.glossary.horizontal,
       vertical: this.glossary.vertical,
-      words_left: this.words
+      words_left: this.words_left
     }
   }
 

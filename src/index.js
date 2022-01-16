@@ -30,10 +30,12 @@ const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App)
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
-      <link href="/assets/css/custom_bootstrap.css" rel="stylesheet" />
-      <link href="/assets/css/styles.css" rel="stylesheet" />
+      <link href="/assets/css/custom_bootstrap.css" rel="stylesheet" media="all"/>
+      <link href="/assets/css/styles.css" rel="stylesheet" media="all"/>
       <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
       <link href="/MatrixSchema.js"/>
+      <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print" />
+      <title>CruzaPalabras</title>
     </Helmet>
     <Provider store={store}>
       <AppContainer />

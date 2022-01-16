@@ -1,5 +1,4 @@
 import React from 'react';
-import MainMenu from './Views/MainMenu.js'
 import InitialMenu from './Views/InitialMenu.js'
 import ModeView from './Views/ModeView.js'
 
@@ -27,6 +26,8 @@ class Main extends React.Component {
         return <InitialMenu onModeChange={this.handleMode}/>
       case 'modeView':
         return <ModeView mode={this.state.mode} />
+      default:
+      return <InitialMenu onModeChange={this.handleMode}/>
     }
   }
 }

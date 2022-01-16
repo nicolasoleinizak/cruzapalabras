@@ -7,9 +7,6 @@ import Create from './Modes/Create.js'
 import Search from './Modes/Search.js'
 
 class ModeView extends React.Component {
-  constructor(props){
-    super(props)
-  }
 
   render () {
     let section = () => {
@@ -20,12 +17,17 @@ class ModeView extends React.Component {
           return <Create />
         case 'search':
           return <Search />
+        default:
+          return <Create />
       }
     }
     return (
       <main>
         <MainMenu/>
         {section()}
+        <div id="attribution">
+          Creado por CruzaPalabras (www.cruzapalabras.com)
+        </div>
       </main>
     )
   }

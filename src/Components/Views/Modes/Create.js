@@ -8,7 +8,7 @@ class Create extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      words: ['palabras', 'cruzadas', 'pizzicato', 'holmes', 'misterio'],
+      words: [''],
       isMatrixCreated: false,
       matrixSchema: {
         matrix: [],
@@ -172,6 +172,19 @@ class Create extends React.Component{
             <button className="btn btn-primary btn-md mt-3 btn-block not-printable" onClick={this.print}>Imprimir <i className="fa-solid fa-print"/></button>
           </div>
         }
+        <div id="instructions" className="container pt-5 not printable">
+          <h2>¿Cómo crear mi propio tablero?</h2>
+          <p>¡Solo sigue estos simples pasos!</p>
+          <ol>
+            <li><strong>Ingresa las palabras</strong> que quieras, una por una. Ten cuidado de no dejar espacios vacíos. Solo se pueden usar letras. Recomendamos evitar el uso de acentos, porque será más difícil generar un tablero</li>
+            <li>Presiona el botón <strong>"Generar"</strong>. Nuestro algoritmo intentará ubicar todas las palabras. Si no puede ubicar toas, te avisará cuáles no se pudo introducir. Podrás intentar generarlo nuevamente, o quitar las palabras que no se pueden ubicar. ¡A veces simplemente no se puede!</li>
+            <li>Ahora que has generado el tableto, aparecerá una lista de las palabras con dirección vertical u horizontal. <strong>Deberás llenar el significado para cada una.</strong></li>
+            <li>Con el glosario completo, es hora de imprimir tu juego: para imprimirlo vacío (listo para jugar) <strong>presiona primero en "Ocultar resolución".</strong></li>
+            <li>Por último, <strong>presiona en "Imprimir"</strong> y se abrirá el cuadro de diálogo de impresión.</li>
+          </ol>
+          <p>¡Eso es todo! Dentro de poco, habilitaremos una nueva y genial función para que puedas enviar tu propio juego a quien quieras, de forma digital</p>
+          <p>Además, podrás jugar tú y quien quieras sin salir del sitio web. Genial, ¿no? Solo hace falta un poquito de paciencia, estamos trabajando en ello.</p>
+        </div>
       </div>
     )
   }

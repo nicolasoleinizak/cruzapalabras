@@ -28,6 +28,9 @@ class ModeView extends React.Component {
         <div id="attribution">
           Creado por CruzaPalabras (www.cruzapalabras.com)
         </div>
+        <footer class="container p-2 pt-10 text-center">
+          Este sitio web y el algoritmo de generación del juego fueron creados por <strong><i>Sofly</i></strong>.
+        </footer>
       </main>
     )
   }

@@ -91,6 +91,9 @@ main{
     padding: 5px;
     box-sizing: border-box;
 }
+footer{
+    border-top: 1px solid var(--secondary);
+}
 #attribution{
     display: none;
 }

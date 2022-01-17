@@ -14,11 +14,13 @@ class MainMenu extends React.Component {
         <div id="logo">
           <img src="./img/Logo.png" alt="cruzapalabras (logo)" className="img-fluid"/>
         </div>
+        {/* THIS MENU IS DISABLED UNTIL THE IMPLEMENTATION OF THE ONLINE PLAYING
         <div id="menu-container" className="container d-flex flex-row">
           <button className="btn btn-secondary btn-sm m-1" onClick={() => {this.handleMode('play')}}>Jugar</button>
           <button className="btn btn-secondary btn-sm m-1" onClick={() => {this.handleMode('create')}}>Crear</button>
           <button className="btn btn-secondary btn-sm m-1" onClick={() => {this.handleMode('search')}}><i className="fa-solid fa-magnifying-glass" /></button>
         </div>
+      */}
       </div>
     )
   }
